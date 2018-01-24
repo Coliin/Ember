@@ -1,0 +1,12 @@
+<h1>Route test</h1>
+{{input value=model.name}}
+<h2>Compétences</h2>
+<ul>
+  {{#link-to "test.new"}}Ajouter une compétence{{/link-to}}
+{{#each model.competences as |comp|}}
+  <li>{{comp}}</li>
+{{/each}}
+</ul>
+<p>Modification réalisée : {{model.name}}</p>
+
+{{outlet}}
