@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col">
+    {{multi-select elements = model.dispoItems selectedIds = model.selectedDispoItemsIds}}
+    {{model.dispoItems.length}} élément(s) inclu(s).
+  </div>
+  <div class="col-1">
+    <button disabled="{{unless model.selectedDispoItems.length 'disabled' ''}}" {{action "addTo" model.dispoItems model.includedItems model.selectedDispoItems}}
+      class="btn btn-primary">{{fa-icon "step-forward"}}
+    </button>
+    <button {{action "addTo" model.dispoItems model.includedItems model.dispoItems}}
+      class="btn btn-primary">{{fa-icon "fast-forward"}}
+    </button>
+    <button disabled="{{unless model.selectedIncludedItems.length 'disabled' ''}}" {{action "addTo" model.includedItems model.dispoItems model.selectedIncludedItems}}
+      class="btn btn-primary">{{fa-icon "step-backward"}}
+    </button>
+    <button {{action "addTo" model.includedItems model.dispoItems model.includedItems}}
+      class="btn btn-primary">{{fa-icon "fast-backward"}}
+    </button>
+  </div>
+  <div class="col">
+    {{multi-select elements = model.includedItems selectedIds = model.selectedIncludedItemsIds}}
+    {{model.includedItems.length}} élément(s) inclu(s).
+  </div>
+</div>
