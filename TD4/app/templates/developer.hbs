@@ -1,0 +1,17 @@
+<h2 class="ui header">Developers</h2>
+{{#link-to "developer.new" class="ui button orange"}}Add new developer{{/link-to}}
+<table class="ui single line table">
+  <thead>
+  <tr>
+    <th>Identity</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each model as |dev|}}
+    <tr>
+      <td>{{dev.identity}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
+{{outlet}}

@@ -1,0 +1,22 @@
+<div class="ui message">
+  <i class="large icons">
+    <i class="user icon"></i>
+    <i class="inverted corner add icon"></i>
+  </i>
+  <div class="content">
+    <div class="header">Developer</div>
+    <p>Création d'un développeur</p>
+  </div>
+</div>
+
+<form class="ui form">
+  <div class="field">
+    <label for="identity">Indentity</label>
+    {{input id="identity" value=model.identity}}
+  </div>
+</form>
+<div class="ui segment">
+  <a {{action "save" model}} class="ui positive button">OK</a>
+  <a class="ui button">Cancel</a>
+</div>
+{{outlet}}

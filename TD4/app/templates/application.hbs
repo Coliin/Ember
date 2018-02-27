@@ -1,4 +1,8 @@
-
-
-
-{{outlet}}
+<div class="ui container">
+  <div class="ui menu">
+    {{#link-to "index" class="item"}}Home{{/link-to}}
+    {{#link-to "project" class="item"}}Projects{{/link-to}}
+    {{#link-to "developer" class="item"}}Developer{{/link-to}}
+  </div>
+  {{outlet}}
+</div>
