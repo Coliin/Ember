@@ -1,1 +1,21 @@
-{{outlet}}
+{{#link-to "contacts.add" class="btn btn-dark"}}Ajouter contact{{/link-to}}
+{{input value = model.filter class="form-control" placeholder="Filtrer sur..."}}
+<div class="list-group">
+  {{#each model.datas as |contact|}}
+    <div class="list-group-item">
+      <div class="row">
+        <div class="col">{{contact.nom}}</div>
+        <div class="col">{{contact.prenom}}</div>
+        <div class="col">{{contact.email}}</div>
+        <div class="col">
+          <button class="btn btn-sm btn-dark" {{action "delete" contact}}>
+            {{fa-icon "remove"}}
+          </button></div>
+      </div>
+    </div>
+  {{else}}
+    <div class="alert alert-info">
+      Aucun contact à afficher
+    </div>
+  {{/each}}
+</div>

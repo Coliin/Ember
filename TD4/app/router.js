@@ -7,10 +7,6 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('step');
-  this.route('contact');
-  this.route('test-add-contact');
-  this.route('contacts');
 });
 
 export default Router;
