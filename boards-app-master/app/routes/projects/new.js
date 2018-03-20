@@ -24,7 +24,6 @@ export default Route.extend({
     },
     cancel(){
       this.transitionTo("projects");
-      
     }
   }
 });
