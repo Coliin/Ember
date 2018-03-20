@@ -22,6 +22,18 @@ Router.map(function() {
   this.route('story', function() {
     this.route('new', {path: 'new/:project_id'});
   });
+
+  this.route('tags', function() {
+    this.route('new');
+    this.route('update',{ path: 'update/:tag_id' });
+    this.route('delete',{ path: 'delete/:tag_id' });
+  });
+  this.route('tasks', function() {
+    this.route('new');
+  });
+  this.route('steps', function() {
+    this.route('new');
+  });
 });
 
 export default Router;

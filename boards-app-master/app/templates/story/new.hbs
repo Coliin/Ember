@@ -31,9 +31,9 @@
       <div class="ui action input">
         {{input placeholder="tag..." value=model.tag.title}}
         <select onchange={{action (mut model.tag.color) value="target.value"}} class="ui compact selection dropdown">
-          {{#each model.colors as |color|}}
+        {{#each model.colors as |color|}}
           <option value="{{color}}">{{color}}</option>
-          {{/each}}
+        {{/each}}
         </select>
         <a class="ui button" {{action "newTag" model.tag model}}>New tag</a>
       </div>
