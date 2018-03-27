@@ -14,6 +14,7 @@ export default Route.extend({
   actions:{
     save(tag,data){
      Ember.set(tag,'color',data.color);
+     Ember.set(tag,'title',data.title);
      tag.save().then(()=>{
        this.transitionTo("tags");
      })

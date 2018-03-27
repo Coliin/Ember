@@ -28,11 +28,15 @@ Router.map(function() {
     this.route('update',{ path: 'update/:tag_id' });
     this.route('delete',{ path: 'delete/:tag_id' });
   });
-  this.route('tasks', function() {
-    this.route('new');
-  });
   this.route('steps', function() {
     this.route('new');
+    this.route('update',{ path: 'update/:step_id' });
+    this.route('delete',{ path: 'delete/:step_id' });
+  });
+  this.route('tasks', function() {
+    this.route('new');
+    this.route('update',{ path: 'update/:task_id' });
+    this.route('delete',{ path: 'delete/:task_id' });
   });
 });
 
