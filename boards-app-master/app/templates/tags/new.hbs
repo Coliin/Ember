@@ -3,12 +3,17 @@
     <div class="field">
       <label id="" class="" for="frmEdit-title">Title</label>
       <div id="div-frmEdit-title" class="ui input">
-        {{input id="frmEdit-title" value=model.title placeholder="Title"}}
+        {{input id="frmEdit-title" value=model.tag.title placeholder="Title"}}
       </div>
       <label id="" class="" for="frmEdit-color">Color</label>
       <div id="div-frmEdit-color" class="ui input">
-        {{input id="frmEdit-color" value=model.color placeholder="Color"}}
+        <select onchange={{action (mut model.tag.color) value="target.value"}} class="ui compact selection dropdown">
+        {{#each model.colors as |color|}}
+          <option value="{{color}}">{{color}}</option>
+        {{/each}}
+        </select>
       </div>
     </div>
   {{/ui-form}}
-</div>{{outlet}}
+</div>
+{{outlet}}

@@ -7,7 +7,11 @@
       </div>
       <label id="" class="" for="frmEdit-color">Color</label>
       <div id="div-frmEdit-color" class="ui input">
-        {{input id="frmEdit-color" value=model.data.color placeholder="Color"}}
+        <select value="{{model.data.color}}" onchange={{action (mut model.data.color) value="target.value"}} class="ui compact selection dropdown">
+        {{#each model.colors as |color|}}
+          <option value="{{color}}">{{color}}</option>
+        {{/each}}
+        </select>
       </div>
     </div>
   {{/ui-form}}

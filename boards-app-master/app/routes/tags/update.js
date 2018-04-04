@@ -5,6 +5,7 @@ import RSVP from 'rsvp';
 export default Route.extend({
   model(params){
     return new RSVP.hash({
+      colors:['black','blue','green','orange','pink','purple','red','teal','yellow','positive','negative'],
       tag: this.get('store').findRecord('tag',params.tag_id)
     });
   },
