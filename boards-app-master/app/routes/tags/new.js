@@ -6,8 +6,6 @@ export default Route.extend({
   model(){
     return RSVP.hash({
       tag: EmberObject.create(),
-      idTags:[],
-      tags: this.get('store').findAll('tag'),
       colors:['black','blue','green','orange','pink','purple','red','teal','yellow','positive','negative'],
     });
   },
@@ -21,5 +19,5 @@ export default Route.extend({
     cancel(){
       this.transitionTo("tags");
     },
-  }
+  },
 });
