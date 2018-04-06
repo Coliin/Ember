@@ -7,7 +7,7 @@
       </div>
       <label id="" class="" for="frmEdit-color">Color</label>
       <div id="div-frmEdit-color" class="ui input">
-        <select value="{{model.data.color}}" onchange={{action (mut model.data.color) value="target.value"}} class="ui compact selection dropdown">
+        <select onchange={{action (mut model.data.color) value="target.value"}} class="ui compact selection dropdown">
         {{#each model.colors as |color|}}
           <option value="{{color}}">{{color}}</option>
         {{/each}}
