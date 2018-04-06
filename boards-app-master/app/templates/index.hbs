@@ -14,13 +14,14 @@
               <b>{{modelClass.name}}</b>
             </div>
             <div class="ui basic buttons">
-              <button class="ui button">
+              {{#if modelClass.objects.length}}
+                <button class="ui button">
                 {{#link-to modelClass.routeName class="ui button"}}
                   <i class="eye icon"></i>
                   See all
                 {{/link-to}}
-              </button>
-              <div class="ui divider"></div>
+                </button>
+              {{/if}}
               <button class="ui button">
                 {{#link-to modelClass.newName class="ui button"}}
                   <i class="plus icon"></i>
